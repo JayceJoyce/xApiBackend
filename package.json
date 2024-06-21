@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayceJoyce/xApiBackend.git"
+  },
+  "author": "Elsa Sofia Ramirez Perusquia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayceJoyce/xApiBackend/issues"
+  },
+  "homepage": "https://github.com/JayceJoyce/xApiBackend#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "axios-oauth-1.0a": "^0.3.6",
+    "axios-oauth-client": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "twitter-api-v2": "^1.17.1"
+  }
+}
