@@ -11,22 +11,29 @@ const oauth_token = "1528519399036145668-Z30yHssf6crIX98Rii9o8L9QpaTSi6"
 const oauth_token_secret = "ZwEtcChBvcOOSf7c0gMAdXjYTeidgjuL1hppQh04HMxin"
 /* victor cuenta */
 
+const client = new TwitterApi({
+  appKey: CONSUMER_KEY,
+  appSecret: CONSUMER_SECRET,
+  accessToken: oauth_token,
+  accessSecret: oauth_token_secret,
+});
 
     app.use(cors())
+    app.use(express.json());
+
     app.get('/', async (req, res) => {
-        const client = new TwitterApi({
-          appKey: CONSUMER_KEY,
-          appSecret: CONSUMER_SECRET,
-          accessToken: oauth_token,
-          accessSecret: oauth_token_secret,
-        });
-      
         //const result = await client.v2.get('users/me');/* , { query: 'nodeJS', max_results: 100 } */
         //console.log(result.data); 
        // res.send(JSON.stringify(result.data))
-       res.send(JSON.stringify({"id":"1528519399036145668","name":"ElsaBananasCheese","username":"BananasElsa"}));
+       res.send({"id":"1528519399036145668","name":"ElsaBananasCheese","username":"BananasElsa"});
       });
+      app.post('/tweet',async (req,res) => {
+        let tweet = req.body.tweet;
+        let endpoint = 'tweets'
+        const result = await client.v2.tweet(tweet);
+        res.send(JSON.stringify(result.data))
+    })
 
-    app.listen(8080, () => {
+    app.listen(8080, (e) => {
         console.log('server listening on port 8080')
     })
