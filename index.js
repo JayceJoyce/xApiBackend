@@ -37,8 +37,10 @@ const oauth_token_secret = "ZwEtcChBvcOOSf7c0gMAdXjYTeidgjuL1hppQh04HMxin"
         //const result = await client.v2.get('users/me');/* , { query: 'nodeJS', max_results: 100 } */
         //console.log(result.data); 
        // res.send(JSON.stringify(result.data))
+       //https://api.twitter.com/2/users/by/username/BananasElsa?user.fields=profile_image_url //profile pic
        res.send({"id":"1528519399036145668","name":"ElsaBananasCheese","username":"BananasElsa"});
       });
+      
       app.get('/user', async(req,res)=>{
         config.url = 'https://graph.instagram.com/7746641495390561?fields=id,username&access_token='+ACCESS_TOKEN
         config.method = 'get'
