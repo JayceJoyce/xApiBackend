@@ -21,7 +21,7 @@ const oauth_token = "1528519399036145668-Z30yHssf6crIX98Rii9o8L9QpaTSi6"
 const oauth_token_secret = "ZwEtcChBvcOOSf7c0gMAdXjYTeidgjuL1hppQh04HMxin"
 
 /* elsa cuenta Insta */
-  const ACCESS_TOKEN = "IGQWRNaFNVQzJLR2IyU25PSTVRZAGN5WXhkeXhpMmZAWU1hKUjJ0SnpuZA085ZA1lBaVNSSjFIODJpV2QwTTk2WVhjZA1FFazZAGaXcwWmdhaXphTThFQWxMcEFqdHJvYmJIWi1PN0daazRaSzlCSG95Sk9sajREMktValowM3FYbHNHdlZAhdwZDZD"
+  const ACCESS_TOKEN = "IGQWROWnBwUDZAlY2czUWJXdTZASLTFwVm1yRFlHWDFKdlZAqc2dRNHk0RENuZA3FydWVhMXk5QTJZAcWxvbElvTmNBd0d3T0FCSm4tQV80UGhXVU5zN0M5anZAmWUZANTTNoUDJHRkE0M1NMcTNGYy1BUVhod1JrZAGhiam9Jb1JocFJSRjZAQQQZDZD"
 
     const client = new TwitterApi({
       appKey: CONSUMER_KEY,
@@ -41,7 +41,7 @@ const oauth_token_secret = "ZwEtcChBvcOOSf7c0gMAdXjYTeidgjuL1hppQh04HMxin"
        res.send({"id":"1528519399036145668","name":"ElsaBananasCheese","username":"BananasElsa"});
       });
       
-      app.get('/user', async(req,res)=>{
+      app.get('/instagram/user', async(req,res)=>{
         config.url = 'https://graph.instagram.com/7746641495390561?fields=id,username&access_token='+ACCESS_TOKEN
         config.method = 'get'
         let result
